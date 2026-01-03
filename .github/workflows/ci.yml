@@ -16,4 +16,8 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - run: mvn clean package
+      - name: Build & Test
+        run: |
+          echo "Start build"
+          mvn clean verify
+          echo "Done"
